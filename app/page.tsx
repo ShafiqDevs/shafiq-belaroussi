@@ -10,6 +10,9 @@ import { ArrowUpCircle } from 'lucide-react';
 
 import Link from 'next/link';
 
+export const dynamic = 'force-static';
+export const revalidate = 60;
+
 export default async function Home() {
 	const headerLinks = await getHeaderContent();
 	const projects = await getProjectsContent();
