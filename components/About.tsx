@@ -2,9 +2,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-type Props = {};
+type Props = {
+	profileImageLink: string;
+	about:
+		| {
+				introductionTitle: string;
+				introduction: string;
+		  }
+		| undefined;
+};
 
-export default function About({}: Props) {
+export default function About({ profileImageLink, about }: Props) {
 	return (
 		<motion.div
 			initial={{
@@ -25,7 +33,7 @@ export default function About({}: Props) {
 				transition={{ duration: 1.2 }}
 				whileInView={{ x: 0, opacity: 1 }}
 				viewport={{ once: true }}
-				src='https://cdn.discordapp.com/attachments/975842657895071764/1314215164521873478/roundeD.jpg?ex=6752f5c0&is=6751a440&hm=02cfae15fb22b3c059078051d0b5e726fb49ac7b0516b461420b214ab829ed8f&'
+				src={profileImageLink}
 			/>
 			<div className='space-y-10 px-0 md:px-10'>
 				<h4 className='text-4xl font-semibold'>
@@ -35,16 +43,7 @@ export default function About({}: Props) {
 					</span>{' '}
 					background
 				</h4>
-				<p className='text-base'>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Eos distinctio aspernatur aut sapiente dolore labore illo
-					minus illum error, quae laudantium totam voluptas numquam
-					facere rem nemo perspiciatis quas quasi. Lorem ipsum dolor
-					sit amet consectetur adipisicing elit. Eius recusandae vitae
-					amet accusamus nihil, quas totam tempore mollitia, sed
-					voluptate ipsam consectetur quibusdam! Possimus animi
-					laborum totam laboriosam, officiis natus.
-				</p>
+				<p className='text-base'>{about?.introduction}</p>
 			</div>
 		</motion.div>
 	);

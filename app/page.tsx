@@ -3,62 +3,83 @@ import Contact from '@/components/Contact';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
-import WorkExperience from '@/components/WorkExperience';
-import Image from 'next/image';
+import { getHeaderContent } from '@/sanity/lib/Header/getHeaderLinks';
+import { urlFor } from '@/sanity/lib/image';
+import { getProjectsContent } from '@/sanity/lib/projects/getProjectsContent';
+import { ArrowUpCircle } from 'lucide-react';
+
 import Link from 'next/link';
 
-export default function Home() {
+export default async function Home() {
+	const headerLinks = await getHeaderContent();
+	const projects = await getProjectsContent();
+
 	return (
 		<div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
 			{/* Header */}
-			<Header />
+			<Header headerLinks={headerLinks?.links ?? []} />
 			{/* Hero */}
 			<section
 				id='hero'
 				className='snap-start'>
-				<Hero />
+				<Hero
+					profileImageLink={urlFor(
+						headerLinks?.profileImage ? headerLinks?.profileImage : ''
+					).url()}
+					jobTitles={
+						headerLinks?.jobTitle ? headerLinks?.jobTitle : ''
+					}
+				/>
 			</section>
 			{/* About */}
 			<section
 				id='about'
 				className='snap-center'>
-				<About />
+				<About
+					profileImageLink={urlFor(
+						headerLinks?.profileImage ? headerLinks?.profileImage : ''
+					).url()}
+					about={{
+						introduction: headerLinks?.about?.introduction ?? '',
+						introductionTitle: headerLinks?.about?.introduction ?? '',
+					}}
+				/>
 			</section>
 			{/* WorkExperience */}
-			<section
+			{/* <section
 				id='experience'
 				className='snap-center'>
 				<WorkExperience />
-			</section>
+			</section> */}
 			{/* Skills */}
-			<section
+			{/* <section
 				id='skills'
 				className='snap-start'>
 				<Skills />
-			</section>
+			</section> */}
 			{/* Projects */}
 			<section
 				id='projects'
 				className='snap-center'>
-				<Projects />
+				<Projects projects={projects} />
 			</section>
 			{/* Contact Me */}
 			<section
 				id='contact'
 				className='snap-start'>
-				<Contact />
+				<Contact
+					email={headerLinks?.contact?.email}
+					phone={headerLinks?.contact?.phoneNumber}
+				/>
 			</section>
-			<Link href={'#hero'}>
-				<footer className='sticky bottom-5 w-full cursor-pointer'>
+			<Link
+				href={'#hero'}
+				className=''>
+				<div className='sticky bottom-5 w-full cursor-pointer'>
 					<div className='flex items-center justify-center'>
-						<img
-							className='w-10 h-10 rounded-full filter grayscale hover:grayscale-0 object-cover object-center'
-							src='https://cdn.discordapp.com/attachments/975842657895071764/1314215164521873478/roundeD.jpg?ex=6752f5c0&is=6751a440&hm=02cfae15fb22b3c059078051d0b5e726fb49ac7b0516b461420b214ab829ed8f&'
-							alt=''
-						/>
+						<ArrowUpCircle className='rounded-full hover:scale-110 transition-transform duration-200 ease-in-out' />
 					</div>
-				</footer>
+				</div>
 			</Link>
 		</div>
 	);

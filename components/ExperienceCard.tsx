@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 type Props = {};
 
-export default function ExperienceCard({}: Props) {
+export default function ExperienceCard(props: Props) {
 	return (
 		<article className='flex flex-col items-center flex-shrink-0 rounded-lg space-y-7 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
 			<motion.img
