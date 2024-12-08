@@ -34,6 +34,7 @@ export default function Header({ headerLinks }: Props) {
 					headerLinks.length > 0 &&
 					headerLinks.map((link) => (
 						<SocialIcon
+							target='_blank'
 							key={uuid()}
 							url={link}
 							fgColor='gray'
@@ -63,7 +64,10 @@ export default function Header({ headerLinks }: Props) {
 					fgColor='gray'
 					bgColor='transparent'
 				/>
-				<Link href={"#contact"} className='uppercase hidden md:inline-flex text-sm text-gray-400'>
+				<Link
+					target='_blank'
+					href={'#contact'}
+					className='uppercase hidden md:inline-flex text-sm text-gray-400'>
 					Get In Touch
 				</Link>
 			</motion.div>

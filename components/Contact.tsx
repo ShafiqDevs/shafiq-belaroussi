@@ -15,7 +15,7 @@ export default function Contact({ email, phone }: Props) {
 			<h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
 				Contact
 			</h3>
-			<div className='flex flex-col space-y-10'>
+			<div className='mt-24 flex flex-col space-y-10'>
 				<h4 className='text-4xl font-semibold text-center'>
 					I have got just what you need.{' '}
 					<span className='decoration-[#F7AB0A]/50 underline'>
