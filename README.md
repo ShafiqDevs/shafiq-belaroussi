@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ![Personal Portfolio Header](https://i.postimg.cc/PJYjYp9y/4dc1ae646357fdc478fa53e0cb9e460c.png)
 
-## Getting Started
+## Personal Portfolio Platform
 
-First, run the development server:
+This project is a modern, high-performance portfolio platform built to showcase personal work and highlight key projects. Developed with **Next.js 15**, it leverages server-side rendering for optimized performance and SEO, ensuring a fast and seamless user experience. The design is crafted using **Tailwind CSS**, delivering a clean, responsive, and customizable user interface that adapts across all devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+For content management and real-time updates, **Sanity** is integrated as the headless CMS, enabling easy management of portfolio content and instant synchronization with minimal latency. The platform is built with scalability in mind, ensuring it can grow with new content and features while maintaining a high level of performance.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+By combining **Next.js**, **Tailwind CSS**, and **Sanity**, this project demonstrates a cutting-edge approach to web development, with a focus on performance, user engagement, and scalability. It serves as an elegant and efficient platform for presenting personal projects and achievements.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Key Features and Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 15**: Optimized for performance with server-side rendering, improving both speed and SEO.  
+- **Tailwind CSS**: Provides a customizable and responsive design system for a sleek, mobile-first experience.  
+- **Sanity CMS**: Real-time content management with easy-to-use interfaces for updating and maintaining the portfolio.  
+- **Responsive Design**: Ensures the portfolio looks great on any device with a flexible, mobile-friendly layout.  
+- **SEO Optimized**: Built with a focus on high performance, helping the portfolio rank higher in search engines.  
+- **Scalable Architecture**: Easily extensible to accommodate new projects, features, and content over time.
