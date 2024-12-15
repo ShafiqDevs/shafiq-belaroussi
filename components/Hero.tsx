@@ -13,7 +13,7 @@ type Props = {
 export default function Hero({ profileImageLink, jobTitles }: Props) {
 	const [text] = useTypewriter({
 		words: [
-			"H, The Name's Shafiq Belaroussi",
+			"Hi, The Name's Shafiq Belaroussi",
 			'Guy-who-loves-Coffee.tsx',
 			'<ButLovesToCodeMore/>',
 		],
