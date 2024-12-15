@@ -25,7 +25,7 @@ export default function About({ profileImageLink, about }: Props) {
 				About
 			</h3>
 			<motion.img
-				className='mt-24 -mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]'
+				className='mt-24 md:mt-48 -mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]'
 				initial={{
 					x: -200,
 					opacity: 0,
